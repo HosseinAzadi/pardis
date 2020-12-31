@@ -1,0 +1,28 @@
+{
+    "name": "modules/pardisCore",
+    "type": "library",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vahid Ashourzadeh",
+            "email": "v.ashourzadeh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\PardisCore\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\PardisCore\\PardisCoreServiceProvider"
+            ]
+        }
+    }
+}

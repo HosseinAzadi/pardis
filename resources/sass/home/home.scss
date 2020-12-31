@@ -1,0 +1,577 @@
+// Style for home page
+
+// Fonts
+@import '../fonts/awesome/awesome-font.css';
+@import '../fonts/iransans/iransans-font.css';
+
+// Common Scss
+@import '../app';
+
+@import './core/pages/auth';
+
+body {
+    background-color: $white;
+}
+// style navbar for home page
+.navbar {
+    .navbar-brand {
+        position: absolute;
+        top: -14px;
+        transition: all 0.5s ease-in-out;
+        @media screen and (max-width: 1199px){
+            display: none;
+        }
+
+        img {
+            border: 1px solid $primary;
+        }
+    }
+
+    .navbar-brand-scroll {
+        overflow: hidden;
+        height: 146px;
+        top: -96px;
+    }
+
+    #navbarSupportedContent {
+        margin-right: 127px;
+
+        @media screen and (max-width: 1199px){
+            margin-right: 0px;
+        }
+
+        ul {
+            @media screen and (max-width: 1199px){
+                padding-right: 0px;
+            }
+        }
+    }
+
+    .dropdown-toggle {
+        &::after {
+            vertical-align: baseline !important;
+        }
+    }
+
+    .navbar-nav {
+        .nav-item {
+            .nav-title {
+                color: $theme-orange !important;
+                font-size: 1.3em;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: transparent !important;
+                }
+            }
+            .nav-link {
+                color: $white;
+                padding: 0.5rem 0.7rem;
+                line-height: 1.625rem;
+
+                &:hover , &:focus {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+// hover nav-link in navbar
+.navbar .navbar-nav {
+    .nav-item.active .nav-link:not(.btn) {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 0.1875rem;
+    }
+    .nav-item {
+        .nav-link:not(.btn) {
+            &:focus, &:hover, &:active {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 0.1875rem;
+            }
+        }
+    }
+}
+
+// color for text navbar brand
+.navbar-brand {
+    color: $white !important;
+}
+
+//.nav-pills .nav-link, .nav-item .nav-link, .navbar, .nav-tabs .nav-link {
+//    -webkit-transition: all 300ms ease 0s;
+//    -moz-transition: all 300ms ease 0s;
+//    -o-transition: all 300ms ease 0s;
+//    -ms-transition: all 300ms ease 0s;
+//    transition: all 300ms ease 0s;
+//}
+
+.yellow-bg-section{
+    background-color: #fff7dc;
+}
+
+.shadowed-section{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    z-index: 10;
+    position: relative;
+}
+
+.section-title {
+    color: $danger;
+    font-weight: 500;
+    line-height: 1.9;
+    font-size: 1.6rem;
+    padding-bottom: 15px;
+}
+
+// Header Home Style
+.home-header {
+    //background: url('../../images/home/h7.jpg') no-repeat;
+    //width: 100%;
+    //height: 100vh;
+    //background-size: cover;
+    //position: relative;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
+
+    .owl-slider .item img{
+        height: 100vh;
+    }
+
+    /* --------- Captions ------*/
+    .caption{
+        position: absolute;
+        top: 23%;/* vertical offset*/
+        left: 20%;/* horizontal offset*/
+        width: 60vw; /* width to centralise */
+        height: 50%; /* width to centralise */
+    }
+
+
+    /* ------ random css ----*/
+
+    .caption-text {
+        background-color: rgba(255,255,255,0.8);
+        padding: 40px 20px;
+        border-radius: 0.5rem;
+        position: absolute;
+        z-index: 10;
+        top: 100px;
+        color: $dark !important;
+
+        h2{
+            font-weight: 900;
+            font-size: 2.5em;
+            line-height: 2.5em;
+        }
+    }
+
+    .txt-title {
+        margin-bottom: 34px;
+    }
+
+    .txt-subtitle {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        @media screen and (max-width: 400px) {
+            font-size: 1.2rem;
+            line-height: 2rem;
+        }
+    }
+
+    .form-input-search {
+        position: relative;
+
+        i {
+            position: absolute;
+            top: 18.5px;
+            left: auto;
+            right: 14px;
+            font-size: 23px;
+            color: $danger;
+        }
+
+        input {
+            width: 100%;
+            border: 0;
+            height: 60px;
+            border-radius: 25px;
+            outline: none;
+            padding-left: 20px;
+            padding-right: 46px;
+            line-height: 61px;
+            box-shadow: 12px 12px 30px 0 rgba(77,77,119,.10);
+            font-weight: 500;
+            color: $danger;
+            font-size: 1.5em;
+        }
+    }
+}
+
+// Price Reduction
+.price-reduction {
+    background-color: $dark;
+    width: 100%;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+    @media screen and (max-width: 400px) {
+        height: 25vh;
+    }
+    .txt-price-reduction {
+        font-size: 2.2rem;
+        line-height: 85px;
+        @media screen and (max-width: 992px) and (min-width: 540px) {
+            font-size: 2rem;
+            line-height: 65px;
+        }
+        @media screen and (max-width: 539px) {
+            font-size: 1.6rem;
+            line-height: 58px;
+        }
+    }
+}
+
+// step style register in home page
+.step-one::before {
+    background: url(../../images/home/awro1.png)0 0 no-repeat;
+    position: absolute;
+    content: "";
+    height: 31px;
+    position: absolute;
+    right: -100px;
+    top: 160px;
+    width: 96px;
+    @media screen and (max-width: 992px){
+        display: none;
+    }
+}
+
+.step-two::before {
+    background: url(../../images/home/awro2.png) 0 0 no-repeat;
+    position: absolute;
+    content: "";
+    height: 31px;
+    position: absolute;
+    right: -100px;
+    top: 65px;
+    width: 96px;
+    @media screen and (max-width: 992px){
+        display: none;
+    }
+}
+
+.step-one {
+    position: relative;
+}
+
+.our-services-icon {
+    background: #eff2f7 none repeat scroll 0 0;
+    border: 10px solid #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px #eff2f7;
+    height: 200px;
+    line-height: 183px;
+    margin: auto auto 25px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 200px;
+    font-size: 35px;
+
+    img {
+        margin-right: -10px;
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    i {
+        -webkit-transition: all .4s ease-in-out;
+        -moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            color: $danger;
+            font-size: 1.6em;
+        }
+    }
+}
+
+.our-services {
+    //background: #ece4e4 url(../../images/home/TechUsers.png) no-repeat center center;
+    background-image: linear-gradient(0deg, rgba(4, 104, 189, 0.8) 100%, rgba(0,61,111,0.8) 100%), url(../../images/home/TechUsers.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .section-title {
+        padding-bottom: 85px;
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $white;
+        margin-bottom: 0px;
+    }
+
+    .our-services-title {
+        line-height: 1.2;
+        color: $white;
+        font-weight: 600;
+        font-size: 1.7em;
+        margin-bottom: 0px;
+        
+        a{
+            color: $white;
+        }
+    }
+}
+
+.company-list-category {
+    background-color: $bg-light;
+    padding: 50px 0px;
+}
+
+// counter
+#counter-home-system {
+    //background: #ece4e4 url(../../images/home/TechUsers.png) no-repeat center center;
+    background-image: linear-gradient(0deg, rgba(4, 104, 189, 0.8) 100%, rgba(0,61,111,0.8) 100%), url(../../images/home/TechUsers.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: $white;
+        margin-bottom: 0px;
+        padding-bottom: 85px;
+    }
+
+    .counter-content {
+        margin-top: 20px;
+        .counter-content-img {
+            margin-bottom: 30px;
+        }
+
+        #counter-number1 ,
+        #counter-number2 ,
+        #counter-number3 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            color: $theme-orange;
+        }
+        .counter-text {
+            font-weight: 600;
+            font-size: 1.7em;
+            margin-top: 30px;
+            color: $white;
+
+            @media screen and (max-width: 992px){
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+// about-us
+#about-us {
+    padding-top: 10px;
+    padding-bottom: 48px;
+    background-color: $bg-light;
+
+    .about-us-content {
+        text-align: justify;
+        font-size: 1.4rem;
+        line-height: 1.8;
+    }
+}
+
+// cotact us
+.contact-us {
+    background-color: $bg-light;
+
+    .contact-us-content {
+        text-align: justify;
+        font-size: 1.3em;
+        line-height: 1.7;
+    }
+}
+
+// ******************************
+// Start style for company profile page
+.home-header-profile-company {
+    background: url('../../images/home/h7.jpg') no-repeat;
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    position: relative;
+    //display: flex;
+    //justify-content:flex-start;
+    //align-items: center;
+
+    @media screen and (max-width: 992px){
+        justify-content: center;
+    }
+
+    .txt-title {
+        color: $white;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        font-weight: 500;
+        height: 40vh;
+        align-items: center;
+
+        @media screen and (max-width: 992px){
+            text-align: center;
+        }
+        @media screen and (max-width: 375px){
+            font-size: 1.4rem;
+        }
+        span {
+            padding-right: 15px;
+
+            @media screen and (max-width: 992px){
+                padding-right: 0px;
+            }
+        }
+        @media screen and (min-width: 1200px){
+            >div{
+                margin-top: 5em;
+            }
+        }
+    }
+
+    .thumbnail-profile {
+        position: absolute;
+        bottom: -50px;
+        left: 10.5%;
+    }
+}
+.products-company-list {
+    .products {
+        .item {
+            .card-title {
+                min-height: 70px;
+                font-weight: 500;
+                color: $primary;
+            }
+        }
+    }
+}
+#service-profile-company {
+    background-color: $bg-light;
+    padding-bottom: 30px;
+
+    .accordion-multiple {
+        .card-header {
+            font-size: 1.1em;
+            background-color: #44883c0f !important;
+        }
+    }
+
+    ul.pills-service-content {
+        padding-right: 0px;
+
+        li {
+            margin-bottom: 20px;
+            .service-subtitle {
+                span {
+                    &:first-child {
+                        &:before {
+                            content: '✓';
+                            color: $danger;
+                            font-weight: 600;
+                            font-size: 1.2em;
+                        }
+                    }
+                    &:last-child {
+                        font-weight: 600;
+                    }
+                }
+            }
+            span {
+                &:last-child {
+                    @media screen and (max-width: 767px){
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#information-profile-company {
+    padding-top: 48px;
+    .tab-content {
+        border: thin solid $primary;
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+}
+// End style for company profile page
+// ******************************
+
+
+// ******************************
+// Start style for membership company page
+.list-company {
+    .card {
+        position: relative;
+
+        a {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .card-body {
+            padding: 20px 16px;
+
+            .card-text {
+                min-height: 46px;
+                margin-bottom: 0px;
+                font-weight: 500;
+                color: $primary;
+            }
+            .card-title {
+                min-height: 35px;
+                margin-bottom: 0px;
+                font-weight: 500;
+                color: $danger;
+            }
+        }
+    }
+}
+// End style for membership company page
+// ******************************
+
+// footer style for icon social
+footer {
+    .social {
+        a {
+            margin-left: 8px;
+            i {
+                font-size: 1.25em;
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+// Edit grid-breakpoints in xl , xxl size
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1600px
+);
+
+// Edit container-max-widths in xl , xxl size
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1160px,
+    xxl: 1560px
+);
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+//$primary: #44883c;
+$danger: #ab0000;
+$dark: #212529;
+$success : #a6d84f;
+$primary: #0059a5;
+$theme-orange: #f37022;
+
+$gray-100: #f1f2f3;
+$navbar-light-color: rgba($dark, .9);
+$white: #FFF;
+$bg-light: #f8fafc;
+//theme colors
+$theme-colors: (
+    theme-orange : $theme-orange,
+);
+
+
+//
+// Panel Side Application Variables
+
+// Complementry color is used to indecate the loading bar on the top
+// of the page with pace.js plugin
+$complementry-color: adjust_hue($primary, 180);
+
+// ------- Sidebar Width --------
+$sidebar-width: 230px;
+
+// ------- Sidebar Colors --------
+
+// Background color of sidebar
+//$sidebar-color: rgba(116, 117, 118, 0.87);
+$sidebar-color: #747576;
+
+// -- Suggested sidebar background colors
+// dark  : #222d32
+// light : #f8f8f8
+
+// Sidebar accent varible is used to determine the color of the links
+// of the sidebar. The allowed values are 'light' or 'dark' only
+$sidebar-accent: light;
+
+// The following varibles indecate sidebar link color
+// and link hover color when using a dark sidebar color
+$sidebar-dark-color: #fff;
+$sidebar-dark-link-color: #fff;
+
+// The following varibles indecate sidebar link color
+// and link hover color when using a light sidebar color
+//$sidebar-light-color: #000;
+//$sidebar-light-link-color: #333;
+
+
+//
+$sidebar-light-color: #fff;
+$sidebar-light-link-color: #fff;
+
+$sidebar-bg: #3c3f42;
+$sidebar-hover-bg: #e1e2e3;

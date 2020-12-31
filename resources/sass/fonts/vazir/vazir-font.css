@@ -1,0 +1,60 @@
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir.eot');
+    src: url('./eot/vazir.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir.woff2') format('woff2'),
+    url('./woff/vazir.woff') format('woff'),
+    url('./ttf/vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir-Bold.eot');
+    src: url('./eot/vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir-Bold.woff2') format('woff2'),
+    url('./woff/vazir-Bold.woff') format('woff'),
+    url('./ttf/vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir-Black.eot');
+    src: url('./eot/vazir-Black.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir-Black.woff2') format('woff2'),
+    url('./woff/vazir-Black.woff') format('woff'),
+    url('./ttf/vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir-Medium.eot');
+    src: url('./eot/vazir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir-Medium.woff2') format('woff2'),
+    url('./woff/vazir-Medium.woff') format('woff'),
+    url('./ttf/vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir-Light.eot');
+    src: url('./eot/vazir-Light.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir-Light.woff2') format('woff2'),
+    url('./woff/vazir-Light.woff') format('woff'),
+    url('./ttf/vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: vazir;
+    src: url('./eot/vazir-Thin.eot');
+    src: url('./eot/vazir-Thin.eot?#iefix') format('embedded-opentype'),
+    url('./woff2/vazir-Thin.woff2') format('woff2'),
+    url('./woff/vazir-Thin.woff') format('woff'),
+    url('./ttf/vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}

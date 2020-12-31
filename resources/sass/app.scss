@@ -1,0 +1,221 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import  '~bootstrap-v4-rtl/scss/bootstrap-rtl';
+
+// Plugins
+@import "~animate.css/animate.compat.css";
+
+@import '~sweetalert2/src/sweetalert2.scss';
+
+@import '~owl.carousel/dist/assets/owl.carousel.css';
+
+@import '~croppie/croppie.css';
+
+@import '~select2/dist/css/select2.css';
+
+@import '~select2-bootstrap-theme/dist/select2-bootstrap.css';
+
+@import "~alertifyjs/build/css/alertify.rtl.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.rtl.min.css";
+
+@import "~sass-svg-uri/svg-uri";
+
+@import '~lity/dist/lity.min.css';
+
+body{
+    font-family: iransans;
+}
+
+// Remove padding-right for modal when shown
+.modal-open {
+    padding-right: 0px !important;
+}
+
+// Edit style for modal center page , color
+.modal {
+    .vertical-alignment-helper {
+        display:table;
+        height: 100%;
+        width: 100%;
+        pointer-events:none;
+
+        .vertical-align-center {
+            /* To center vertically */
+            display: table-cell;
+            vertical-align: middle;
+            pointer-events:none;
+
+            .modal-content {
+                border-top: 4px solid $blue;
+
+                /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+                width:inherit;
+                max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+                height:inherit;
+                /* To center horizontally */
+                margin: 0 auto;
+                pointer-events:all;
+
+
+                .modal-header {
+                    //background-color: #dcdcdc;
+                    background-color: #E5E5E5;
+
+                    .modal-title {
+                        font-size: 1.3em;
+                    }
+
+                    .close {
+                        opacity: 1 !important;
+
+                        span {
+                            i {
+                                color: $danger;
+                            }
+
+                            i:hover {
+                                color: darken($danger , 7.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Edit color box-shadow for form-control when focus
+.form-control {
+    &:focus {
+        box-shadow: inset 0 1px 1px rgba($primary, 0.075), 0 0 6px lighten($primary , 10);
+    }
+}
+
+// Edit color border & box-shadow for select2-bootstrap-theme
+.has-primary {
+    .select2-container--focus .select2-selection,
+    .select2-container--open .select2-selection {
+        //box-shadow: inset 0 1px 1px rgba($primary, 0.075), 0 0 6px darken($primary , 2);
+        //box-shadow: inset 0 1px 1px rgba(68, 136, 60, 0.07), 0 0 6px #56ab4c;
+        box-shadow: inset 0 1px 1px rgba($primary, 0.07), 0 0 6px rgba($primary, 0.9);
+        //-webkit-box-shadow: inset 0 1px 1px rgba($primary, 0.075), 0 0 6px darken($primary , 2);
+        //border-color: lighten($primary , 10%);
+        border-color: #85c67e;
+    }
+}
+
+.select2-container--bootstrap {
+    .select2-dropdown {
+        border-color: lighten($primary , 25%);
+        overflow-x: hidden;
+        margin-top: -1px;
+    }
+
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: $primary;
+        color: #fff;
+    }
+
+    .select2-search--dropdown .select2-search__field {
+        direction: rtl;
+    }
+
+    .select2-selection--single {
+        height: calc(1.6em + 0.75rem + 2px);
+        padding: 6px 12px 6px 20px;
+
+        .select2-selection__arrow {
+            position: absolute;
+            bottom: 0;
+            top: 0;
+            width: 4px;
+            left: 10px;
+        }
+    }
+}
+
+// Responsive select2
+.select2 {
+    width:100%!important;
+}
+
+// remove black border when button focus
+button {
+    &:focus {
+        outline: 0;
+    }
+}
+
+// Start style sweetAlert2
+.swal2-title {
+    font-size: 1.5em !important;
+}
+// End style sweetAlert2
+
+// Start alertify style background, color, border-radius
+.alertify-notifier {
+    .ajs-message.ajs-visible {
+        border-radius: 0.25rem;
+    }
+
+    // notify style background
+    .ajs-message.ajs-custom {
+        background-color: $info;
+        border-color: $info;
+        border-radius: 0.25rem;
+        color: $white;
+    }
+
+    .ajs-message.ajs-visible {
+        // warning style background
+        &.ajs-warning {
+            background-color: $warning;
+            border-color: $warning;
+            border-radius: 0.25rem;
+            color: $white;
+        }
+
+        // error style background
+        &.ajs-error {
+            background-color: $danger;
+            border-color: $danger;
+            border-radius: 0.25rem;
+        }
+
+        // success style background
+        &.ajs-success {
+            background-color: $success;
+            border-color: $success;
+            border-radius: 0.25rem;
+        }
+    }
+}
+// End alertify style background, color, border-radius
+
+// Remove padding right for id= app when shown sweetalert
+.swal2-shown {
+    padding-right: 0px !important;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+/* Collapse between + , - in header card */
+.accordion-multiple {
+    .accordion-head {
+        .collapsed {
+            i {
+                &:before{
+                    content: "\f067";
+                    //content: "\f105";
+                }
+            }
+        }
+    }
+}
